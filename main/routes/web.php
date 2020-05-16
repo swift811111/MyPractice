@@ -22,4 +22,8 @@ Route::prefix('map')->group(function () {
     Route::get('/', function () {
         return view('map.index');
     });
+
+    Route::get('/getLocalMap', 'MapController@getLocalMap');
+    Route::get('/grabCovid9Data', 'MapController@grabCovid9Data');
+    Route::get('/updateLocalMap', 'MapController@updateLocalMap');
 });
