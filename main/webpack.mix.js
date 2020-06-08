@@ -14,4 +14,5 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/map/main.js', 'public/js/map')
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/map/main.scss', 'public/css/map')
     .extract(['vue']);

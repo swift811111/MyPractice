@@ -115,7 +115,7 @@ class MapController extends Controller
         
         foreach ($json_data as $data_key => $data_value) {
             if(array_key_exists($data_value['country'], $csv_array)){
-                $json_data[$data_key]['covid9_confirm_num'] = $csv_array[$data_value['country']] ;
+                $json_data[$data_key]['covid19_confirm_num'] = $csv_array[$data_value['country']] ;
             }
         }
         file_put_contents('/var/www/myPractice/main/public/storage/extraResource/map/results.json', json_encode($json_data) );
