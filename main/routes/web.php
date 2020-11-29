@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +22,11 @@ Route::prefix('map')->group(function () {
         return view('map.index');
     });
 
-    Route::get('/getLocalMap', 'MapController@getLocalMap');
-    Route::get('/grabCovid9Data', 'MapController@grabCovid9Data');
-    Route::get('/updateLocalMap', 'MapController@updateLocalMap');
+    // Route::get('/getLocalMap', 'MapController@getLocalMap');
+});
+
+
+Route::prefix('address')->group(function () {
+    Route::get('/info/{path}', 'AddressController@GetAddress');
+
 });
